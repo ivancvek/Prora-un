@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proračun December</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+    <div class="container">
+        <header>
+            <h1>Proračun <span class="highlight">December</span></h1>
+            <p class="subtitle">Pregled in upravljanje financ</p>
+        </header>
+        <div class="summary-cards">
+            <div class="card summary-card">
+                <h3>Predvideno</h3>
+                <p class="amount" id="total-estimated">0 €</p>
+            </div>
+            <div class="card summary-card">
+                <h3>Porabljeno</h3>
+                <p class="amount" id="total-spent">0 €</p>
+            </div>
+            <div class="card summary-card">
+                <h3>Razlika</h3>
+                <p class="amount" id="total-difference">0 €</p>
+            </div>
+        </div>
+        <div class="card table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Kategorija</th>
+                        <th class="text-right">Predvideno</th>
+                        <th class="text-right">Porabljeno</th>
+                        <th class="text-right">Razlika</th>
+                        <th>Opombe</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="budget-body">
+                    <!-- Rows will be populated by JS -->
+                </tbody>
+            </table>
+            <div class="controls">
+                <button class="btn" onclick="addEntry()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19"></line>
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    Dodaj vnos
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
